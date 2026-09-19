@@ -1,0 +1,79 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,76633,e=>{"use strict";let t=(0,e.i(15080).default)("refresh-cw",[["path",{d:"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8",key:"v9h5vc"}],["path",{d:"M21 3v5h-5",key:"1q7to0"}],["path",{d:"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16",key:"3uifl3"}],["path",{d:"M8 16H3v5",key:"1cv678"}]]);e.s(["RefreshCw",0,t],76633)},56235,e=>{"use strict";let t=(0,e.i(15080).default)("x",[["path",{d:"M18 6 6 18",key:"1bl5f8"}],["path",{d:"m6 6 12 12",key:"d8bk6v"}]]);e.s(["X",0,t],56235)},5829,e=>{"use strict";var t=e.i(53153),r=e.i(26879),o=e.i(92298);let s=(0,e.i(15080).default)("key-round",[["path",{d:"M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z",key:"1s6t7t"}],["circle",{cx:"16.5",cy:"7.5",r:".5",fill:"currentColor",key:"w0ekpg"}]]);var a=e.i(28762);function n(e){try{let t=new URL(e);return"http:"===t.protocol||"https:"===t.protocol?t:null}catch(e){return null}}var l=e.i(82709),i=e.i(32339),c=e.i(52726),d=e.i(91705);function u(){let e=(0,o.useRouter)(),u=(0,o.useSearchParams)(),{serverUrl:p,hasHydrated:m}=(0,l.useServerStore)(),[f,g]=(0,r.useState)(""),[h,x]=(0,r.useState)(!1),[y,b]=(0,r.useState)(""),[v,w]=(0,r.useState)(!1);(0,r.useEffect)(()=>{let e=u.get("server")||"",t="URL";if(!e)try{e=localStorage.getItem("moke_server_url")||"",t="localStorage"}catch(e){}if((0,d.debugLog)("info","access",`恢复尝试: URL=${u.get("server")||"(无)"}, localStorage=${(()=>{try{return localStorage.getItem("moke_server_url")||"(无)"}catch(e){return"(异常)"}})()}`),e)try{let r=n(e);if(!r)return void(0,d.debugLog)("warn","access","server 值不是合法的 HTTP(S) URL，已忽略");l.useServerStore.getState().serverUrl!==r.origin&&(l.useServerStore.setState({serverUrl:r.origin,protocol:r.protocol.replace(":",""),host:r.hostname,port:r.port||("https:"===r.protocol?"443":"80"),isConnected:!0}),(0,d.debugLog)("success","access",`已从 ${t} 恢复 serverUrl=${r.origin}`))}catch(e){(0,d.debugLog)("error","access",`server 参数解析失败: ${String(e)}`)}},[u]);let j=async t=>{if(!f.trim())return;let r=l.useServerStore.getState().serverUrl;if(!r)try{let e=localStorage.getItem("moke_server_url")||"";if(e&&null!==n(e)){let t=new URL(e);l.useServerStore.setState({serverUrl:t.origin,protocol:t.protocol.replace(":",""),host:t.hostname,port:t.port||("https:"===t.protocol?"443":"80"),isConnected:!0}),r=t.origin,(0,d.debugLog)("warn","access守卫",`提交前从 localStorage 兜底恢复 serverUrl=${t.origin}`)}}catch(e){}if(!r)return void(m?((0,d.debugLog)("error","access守卫","内存、URL、localStorage 均无 serverUrl",{hasHydrated:m,serverUrl:p}),b("未找到服务器地址，请返回欢迎页重新连接")):b("正在加载连接信息，请稍候再试…"));x(!0),b("");try{let r=await (0,a.submitWelcomeCode)(f,t);"ok"===r.err?(w(!1),e.push("/shelf")):"captcha.invalid"===r.err||"captcha.expired"===r.err||"captcha.required"===r.err?(b(r.msg||"请输入人机验证码"),w(!0)):(b(r.msg||"访问码错误"),w(!1))}catch(e){console.error("[AccessPage] submit error:",e),b("无法连接服务器")}finally{x(!1)}};return(0,t.jsxs)("main",{className:"flex items-center justify-center min-h-screen app-warm-bg px-4",children:[(0,t.jsxs)("div",{className:"relative w-full max-w-[410px] my-8 overflow-hidden rounded-[32px] app-glass p-10",children:[(0,t.jsx)("div",{className:"absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/10 blur-2xl"}),(0,t.jsxs)("div",{className:"relative",children:[(0,t.jsx)("button",{type:"button",onClick:()=>(0,c.requestAnimatedBack)("/welcome"),"aria-label":"返回",className:"absolute -top-2 -left-2 w-8 h-8 rounded-full bg-muted hover:bg-muted/80 flex items-center justify-center transition-colors",children:(0,t.jsx)("svg",{xmlns:"http://www.w3.org/2000/svg",className:"w-4 h-4 text-foreground",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:(0,t.jsx)("path",{d:"M15 18l-6-6 6-6"})})}),(0,t.jsx)("div",{className:"flex justify-center mb-8",children:(0,t.jsx)("div",{className:"w-16 h-16 rounded-2xl bg-primary shadow-lg shadow-primary/15 flex items-center justify-center",children:(0,t.jsx)(s,{className:"w-7 h-7 text-primary-foreground"})})}),(0,t.jsx)("h1",{className:"text-[22px] font-bold text-center text-foreground",children:"私人图书馆"}),(0,t.jsx)("p",{className:"text-sm text-center mt-2 mb-8 text-muted-foreground",children:"请输入访问码以继续"}),y&&(0,t.jsx)("div",{className:"bg-destructive/10 border border-destructive/30 text-destructive text-sm rounded-lg p-3 mb-4",children:y}),(0,t.jsxs)("form",{onSubmit:e=>{e.preventDefault(),j()},className:"flex flex-col gap-4",children:[(0,t.jsx)("input",{type:"text",placeholder:"请输入访问码",value:f,onChange:e=>g(e.target.value),className:"w-full h-11 px-4 rounded-2xl bg-white/65 border border-amber-950/10 shadow-sm text-foreground text-sm text-center outline-none transition-shadow duration-150 focus:ring-2 focus:ring-ring"}),(0,t.jsx)("button",{type:"submit",disabled:h||!f.trim(),className:"w-full h-11 rounded-2xl bg-primary shadow-lg shadow-primary/15 text-primary-foreground text-base font-semibold cursor-pointer transition hover:opacity-90 active:opacity-80 mt-2 disabled:opacity-50",children:h?"验证中...":"确认"})]})]})]}),(0,t.jsx)(i.CaptchaModal,{isOpen:v,serverUrl:p,onClose:()=>w(!1),onSuccess:e=>j(e)})]})}e.s(["default",0,function(){return(0,t.jsx)(r.Suspense,{fallback:null,children:(0,t.jsx)(u,{})})}],5829)},32339,e=>{"use strict";var t=e.i(53153),r=e.i(26879),o=e.i(56235),s=e.i(76633),a=e.i(28762),n=e.i(20778);let l=new Set(["static.geetest.com"]),i="moke-captcha-sandbox-v1";function c(){var e,t;if("function"==typeof(null==(e=globalThis.crypto)?void 0:e.randomUUID))return globalThis.crypto.randomUUID();if("function"==typeof(null==(t=globalThis.crypto)?void 0:t.getRandomValues))return Array.from(globalThis.crypto.getRandomValues(new Uint8Array(16)),e=>e.toString(16).padStart(2,"0")).join("");throw Error("无法创建安全验证码通道")}function d(e){let t=JSON.stringify(e);return void 0===t?"null":t.replace(/</g,"\\u003c").replace(/>/g,"\\u003e").replace(/&/g,"\\u0026").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029")}function u(e,t){let r,o;return`<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body { margin: 0; min-height: 100%; background: transparent; }
+    body { display: flex; align-items: center; justify-content: center; font-family: sans-serif; }
+    #geetest-container { width: 100%; display: flex; justify-content: center; }
+  </style>
+  ${r=d(i),o=d(t),`<script>
+(() => {
+  'use strict';
+  const kind = ${r};
+  const channel = ${o};
+  const send = (type, payload) => {
+    try {
+      window.parent.postMessage({ kind, channel, type, payload }, '*');
+    } catch {
+      window.parent.postMessage({
+        kind,
+        channel,
+        type: 'error',
+        payload: '验证码返回了无法读取的结果',
+      }, '*');
+    }
+  };
+
+  window.__moke_captcha_success = (data) => send('success', data);
+  window.__moke_captcha_error = (error) => send(
+    'error',
+    typeof error === 'string' ? error : '验证码验证失败',
+  );
+})();
+</script>`}
+</head>
+<body>${e}</body>
+</html>`}e.s(["CaptchaModal",0,function({isOpen:e,serverUrl:p,onClose:m,onSuccess:f}){let[g,h]=(0,r.useState)("loading"),[x,y]=(0,r.useState)(null),[b,v]=(0,r.useState)(""),[w,j]=(0,r.useState)(""),[k,S]=(0,r.useState)(!1),[N,C]=(0,r.useState)(""),_=(0,r.useRef)(null),L=(0,r.useRef)(""),[U,E]=(0,r.useState)(""),$=(0,r.useRef)(0),R=(0,r.useRef)(!1),[T]=(0,r.useState)(()=>{let e,t;return e=null,{load:async(r,o)=>{let s;t();let a={controller:new AbortController,callbacks:o};e=a,o.onLoadingChange(!0);let n=()=>e===a&&!a.controller.signal.aborted,l=()=>{e===a&&(e=null,o.onLoadingChange(!1))};try{s=await r(a.controller.signal)}catch(e){if(!n())return;try{o.onError("网络错误，无法加载验证码")}finally{l()}return}if(!n())return;let i=s&&"object"==typeof s?s:{};try{"ok"===i.err&&"string"==typeof i.image&&i.image?o.onImage(i.image):o.onError("string"==typeof i.msg&&i.msg?i.msg:"无法加载验证码")}finally{l()}},cancel:t=()=>{let t=e;t&&(e=null,t.controller.abort(),t.callbacks.onLoadingChange(!1))}}}),D=(0,r.useCallback)(e=>{R.current||(R.current=!0,f(e))},[f]);(0,r.useEffect)(()=>{let e=e=>{var t;let r=function(e,t,r){if(!t||e.source!==t||"null"!==e.origin||!e.data||"object"!=typeof e.data)return null;let o=e.data;return o.kind!==i||o.channel!==r||"success"!==o.type&&"error"!==o.type?null:{type:o.type,payload:o.payload}}(e,null==(t=_.current)?void 0:t.contentWindow,L.current);if(r){if("success"===r.type)return void D(r.payload);C("string"==typeof r.payload&&r.payload?r.payload:"验证码验证失败")}};return window.addEventListener("message",e),()=>window.removeEventListener("message",e)},[D]);let M=(0,r.useCallback)(async()=>{let e=++$.current;S(!0),C("");try{let t=await (0,a.request)(`${p}/api/captcha/config`,{credentials:"include"}),r=await t.json();if(e!==$.current)return;if("ok"!==r.err||!r.config)throw Error(r.msg||"无法加载验证码配置");y(r.config)}catch(t){if(e!==$.current)return;h("error"),C(t instanceof Error?t.message:"网络错误，无法加载验证码"),S(!1)}},[p]),I=(0,r.useCallback)(()=>{T.cancel()},[T]),A=(0,r.useCallback)(()=>(C(""),T.load(async e=>(await (0,a.request)(`${p}/api/captcha/image`,{credentials:"include",signal:e})).json(),{onImage:v,onError:C,onLoadingChange:S})),[T,p]);if((0,r.useEffect)(()=>{x&&("image"===x.provider?h("image"):"geetest"===x.provider?h("geetest"):h("webcode"))},[x]),(0,r.useEffect)(()=>{let t=!1;if(E(""),L.current="",e){if("image"===g)return A(),I;if("geetest"===g){if(!x)return;try{let e,t,r=c();L.current=r,E((e=function(e){let t;if(null==e||""===e)return"https://static.geetest.com/v4/gt4.js";if("string"!=typeof e)throw Error("极验 SDK 地址不受信任");try{t=new URL(e)}catch(e){throw Error("极验 SDK 地址不受信任")}if("https:"!==t.protocol||!l.has(t.hostname.toLowerCase())||""!==t.username||""!==t.password)throw Error("极验 SDK 地址不受信任");return t.href}(x.sdkUrl),t=(0,n._)({captchaId:x.captchaId,product:"popup",language:"zho"},{https:!0,protocol:"https://"}),u(`<div id="geetest-container"></div>
+<script>
+(() => {
+  'use strict';
+  const fail = (message) => window.__moke_captcha_error(message);
+  const sdk = document.createElement('script');
+  sdk.src = ${d(e)};
+  sdk.async = true;
+  sdk.onerror = () => fail('极验 SDK 加载失败');
+  sdk.onload = () => {
+    try {
+      if (typeof window.initGeetest4 !== 'function') {
+        fail('极验 SDK 加载失败');
+        return;
+      }
+
+      window.initGeetest4(${d(t)}, (gt) => {
+        try {
+          gt.appendTo('#geetest-container')
+            .onSuccess(() => {
+              const result = gt.getValidate() || {};
+              window.__moke_captcha_success({
+                provider: 'geetest',
+                lot_number: result.lot_number,
+                captcha_output: result.captcha_output,
+                pass_token: result.pass_token,
+                gen_time: result.gen_time,
+              });
+            })
+            .onError(() => fail('极验验证失败'));
+          gt.showCaptcha();
+        } catch {
+          fail('极验初始化失败');
+        }
+      });
+    } catch {
+      fail('极验初始化失败');
+    }
+  };
+  document.head.appendChild(sdk);
+})();
+</script>`,r)))}catch(e){h("error"),C(e instanceof Error?e.message:"极验 SDK 加载失败")}return()=>{L.current=""}}if("webcode"===g){if(!x)return;(async()=>{try{let e="string"==typeof x.html?x.html:"string"==typeof x.webCode?x.webCode:"";if(!e){let t=encodeURIComponent(x.provider||""),r=await (0,a.request)(`${p}/api/captcha/web_code?provider=${t}`,{credentials:"include"});if(!r.ok)throw Error(`HTTP ${r.status}`);let o=await r.json();e="string"==typeof o.html?o.html:"string"==typeof o.web_code?o.web_code:""}if(!e)throw Error("未提供或无法获取页面代码");if(t)return;let r=c();L.current=r,E(u(e,r))}catch(r){if(t)return;let e=r instanceof Error?r.message:"网络错误";C(`获取 web 代码失败: ${e}`)}})()}return()=>{t=!0,L.current=""}}},[I,x,A,e,g,p]),(0,r.useEffect)(()=>{if(!e){I(),$.current+=1,L.current="",E(""),y(null),h("loading");return}j(""),v(""),C(""),R.current=!1,h("loading"),y(null),M()},[I,e,M]),!e)return null;let K=U?(0,t.jsx)("iframe",{ref:_,title:"geetest"===g?"极验验证码":"第三方验证码",sandbox:"allow-scripts",referrerPolicy:"no-referrer",srcDoc:U,className:`w-full border-0 bg-transparent ${"geetest"===g?"h-[360px]":"min-h-[220px]"}`}):(0,t.jsx)("div",{className:"flex h-[150px] items-center justify-center",children:(0,t.jsx)("div",{className:"h-8 w-8 animate-spin rounded-full border-2 border-primary/30 border-t-primary"})});return(0,t.jsx)("div",{className:"fixed inset-0 z-50 flex items-center justify-center bg-background/60 backdrop-blur-sm",children:(0,t.jsxs)("div",{className:"relative w-full max-w-[320px] mx-4 rounded-xl p-6 bg-card border border-border shadow-lg",children:[(0,t.jsx)("button",{onClick:m,className:"absolute right-4 top-4 text-muted-foreground hover:text-foreground transition-colors z-10",children:(0,t.jsx)(o.X,{className:"w-5 h-5"})}),(0,t.jsx)("h2",{className:"text-lg font-bold text-foreground mb-4",children:"安全验证"}),N&&(0,t.jsx)("div",{className:"bg-destructive/10 text-destructive text-sm rounded-lg p-2 mb-4 text-center",children:N}),"loading"===g&&(0,t.jsxs)("div",{className:"flex flex-col items-center justify-center py-8",children:[(0,t.jsx)("div",{className:"w-8 h-8 border-2 border-primary/30 border-t-primary rounded-full animate-spin mb-4"}),(0,t.jsx)("p",{className:"text-sm text-muted-foreground",children:"正在加载安全验证..."})]}),"image"===g&&(0,t.jsxs)("form",{onSubmit:e=>{(e.preventDefault(),w.trim())?D(w.trim()):C("请输入验证码")},className:"flex flex-col gap-4",children:[(0,t.jsxs)("div",{className:"flex items-center gap-3",children:[(0,t.jsx)("div",{className:"w-[120px] h-[44px] rounded-lg bg-muted border border-border overflow-hidden shrink-0 flex items-center justify-center",children:k?(0,t.jsx)("div",{className:"w-5 h-5 border-2 border-primary/30 border-t-primary rounded-full animate-spin"}):b?(0,t.jsx)("img",{src:b,alt:"验证码",className:"w-full h-full object-cover cursor-pointer",onClick:A}):(0,t.jsx)("span",{className:"text-xs text-muted-foreground",children:"加载失败"})}),(0,t.jsx)("button",{type:"button",onClick:A,disabled:k,className:"p-2 text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-muted",title:"刷新验证码",children:(0,t.jsx)(s.RefreshCw,{className:`w-4 h-4 ${k?"animate-spin":""}`})})]}),(0,t.jsx)("div",{children:(0,t.jsx)("input",{type:"text",placeholder:"请输入图片中的字符",value:w,onChange:e=>j(e.target.value),className:"w-full h-11 px-4 rounded-lg bg-muted border border-border text-foreground text-sm outline-none focus:ring-2 focus:ring-ring",autoFocus:!0})}),(0,t.jsx)("button",{type:"submit",disabled:!w.trim()||k,className:"w-full h-11 rounded-lg bg-primary text-primary-foreground font-medium transition hover:opacity-90 active:opacity-80 disabled:opacity-50 mt-2",children:"确认"})]}),"geetest"===g&&(0,t.jsx)("div",{className:"flex flex-col items-center justify-center py-4 min-h-[150px]",children:K}),"webcode"===g&&(0,t.jsxs)("div",{className:"flex flex-col items-center justify-center py-4 min-h-[150px]",children:[K,(0,t.jsx)("p",{className:"text-xs text-muted-foreground mt-4 mb-4 text-center",children:"验证码在隔离环境中运行，完成后将自动提交结果。"}),(0,t.jsx)("button",{type:"button",onClick:()=>{D({provider:(null==x?void 0:x.provider)||"webcode",fallback:!0})},className:"w-full h-11 rounded-lg border border-primary text-primary font-medium transition hover:bg-primary/5 active:bg-primary/10",children:"我已完成验证"})]}),"error"===g&&(0,t.jsx)("div",{className:"flex flex-col items-center justify-center py-8",children:(0,t.jsx)("button",{type:"button",onClick:M,className:"px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition",children:"重试"})})]})})}],32339)}]);
