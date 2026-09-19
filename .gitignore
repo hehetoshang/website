@@ -1,0 +1,8 @@
+node_modules/
+site/node_modules/
+site/docs/node_modules/
+site/dist/
+site/docs/.vitepress/cache/
+site/docs/.vitepress/dist/
+.DS_Store
+.deepsec/
