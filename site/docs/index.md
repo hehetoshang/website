@@ -29,3 +29,20 @@ features:
     title: 跨平台
     details: 支持 Windows、macOS、Linux、Android、iOS、iPadOS 与 OpenHarmony。
 ---
+
+## 按任务查找文档
+
+| 我想要…… | 从这里开始 |
+| --- | --- |
+| 第一次安装和连接 | [快速开始](/guide/getting-started) |
+| 搞清楚书库、书架和离线书架的区别 | [书库、搜索与书架](/guide/library) |
+| 在没有网络时阅读 | [下载与离线阅读](/guide/offline-reading) |
+| 配置阅读器、下载目录或主题 | [设置与显示](/guide/settings) |
+| 使用 HTTP、自签名证书或反向代理 | [网络与安全](/guide/network-security) |
+| 解决连接、登录、在线阅读或下载问题 | [常见问题](/guide/troubleshooting) |
+
+## 墨客、Talebook 与 Readest
+
+Talebook 管理并提供书库，墨客负责连接、浏览与离线，Readest 负责应用内阅读。三者各自独立，又通过明确的接口协作。
+
+[了解项目关系 →](/guide/about)

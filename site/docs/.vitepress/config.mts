@@ -22,32 +22,54 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png',
     nav: [
-      { text: '快速开始', link: '/guide/getting-started' },
+      {
+        text: '使用指南',
+        items: [
+          { text: '快速开始', link: '/guide/getting-started' },
+          { text: '认识界面', link: '/guide/interface' },
+          { text: '阅读与离线', link: '/guide/online-reading' },
+        ],
+      },
+      { text: '常见问题', link: '/guide/troubleshooting' },
       { text: '下载', link: 'https://github.com/talebook/moke/releases/latest' },
     ],
     sidebar: {
       '/guide/': [
         {
-          text: '开始使用',
+          text: '入门',
+          collapsed: false,
           items: [
             { text: '关于墨客', link: '/guide/about' },
             { text: '快速开始', link: '/guide/getting-started' },
             { text: '安装墨客', link: '/guide/installation' },
             { text: '连接 Talebook', link: '/guide/connect-talebook' },
+            { text: '认识界面', link: '/guide/interface' },
           ],
         },
         {
-          text: '阅读与管理',
+          text: '核心功能',
+          collapsed: false,
           items: [
-            { text: '浏览书库', link: '/guide/library' },
+            { text: '书库、搜索与书架', link: '/guide/library' },
             { text: '在线阅读', link: '/guide/online-reading' },
-            { text: '离线书架', link: '/guide/offline-reading' },
+            { text: '下载与离线阅读', link: '/guide/offline-reading' },
+            { text: '设置与显示', link: '/guide/settings' },
           ],
         },
         {
-          text: '帮助',
+          text: '连接与平台',
+          collapsed: true,
+          items: [
+            { text: '网络与安全', link: '/guide/network-security' },
+            { text: '平台差异', link: '/guide/platforms' },
+          ],
+        },
+        {
+          text: '排查与参与',
+          collapsed: false,
           items: [
             { text: '常见问题', link: '/guide/troubleshooting' },
+            { text: '反馈问题与贡献', link: '/guide/contributing' },
           ],
         },
       ],
