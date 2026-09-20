@@ -6,3 +6,5 @@ site/docs/.vitepress/cache/
 site/docs/.vitepress/dist/
 .DS_Store
 .deepsec/
+.runtime/
+.vercel/
