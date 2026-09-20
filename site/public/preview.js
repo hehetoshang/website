@@ -65,10 +65,17 @@
     tablet: { width: 820, height: 650, label: '平板端' },
     mobile: { width: 390, height: 844, label: '手机端' },
   };
-  let activeDevice = 'desktop';
+  const compactPreview = window.matchMedia('(max-width: 720px)');
+  let activeDevice = compactPreview.matches ? 'mobile' : 'desktop';
   let pendingDevice = null;
   let fadeTransitionTimer = 0;
   let deviceTransitionTimer = 0;
+
+  viewport.dataset.device = activeDevice;
+  status.textContent = `${devices[activeDevice].label} · 真实离线模式`;
+  deviceButtons.forEach((item) => {
+    item.setAttribute('aria-pressed', String(item.dataset.device === activeDevice));
+  });
 
   const updateFrameScale = () => {
     const device = devices[activeDevice];
@@ -89,10 +96,18 @@
     const device = devices[activeDevice];
     const desktop = devices.desktop;
     const displayHeight = preview.clientWidth * desktop.height / desktop.width;
-    const moduleWidth = Math.min(
-      preview.clientWidth,
-      displayHeight * device.width / device.height,
-    );
+    // A shared display height works on desktop, but it makes a 390px phone
+    // viewport only about 100px wide on a narrow website. On compact screens,
+    // use the available width instead so the real Moke UI stays readable.
+    const moduleWidth = compactPreview.matches
+      ? Math.min(
+        preview.clientWidth * (activeDevice === 'mobile' ? 0.9 : 1),
+        device.width,
+      )
+      : Math.min(
+        preview.clientWidth,
+        displayHeight * device.width / device.height,
+      );
     const borderWidth = previewWindow.offsetWidth - previewWindow.clientWidth;
     const moduleContentWidth = Math.max(0, moduleWidth - borderWidth);
     const moduleHeight = moduleContentWidth * device.height / device.width;
@@ -111,6 +126,7 @@
     window.addEventListener('resize', updateFrameScale, { passive: true });
   }
   window.addEventListener('resize', fitCompiledFrame, { passive: true });
+  compactPreview.addEventListener?.('change', fitCompiledFrame);
 
   const selectDeviceButton = (deviceName) => {
     deviceButtons.forEach((item) => {

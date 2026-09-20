@@ -1325,9 +1325,10 @@
       .hero::before { display: none; }
       h1 { font-size: clamp(43px, 12vw, 58px); line-height: 1.19; }
       .hero-lead { font-size: 14px; }
-      .preview-wrap { margin-top: 53px; }
-      .preview-toolbar { align-items: flex-start; }
-      .preview-toolbar-label { padding-top: 10px; }
+      .preview-wrap { width: 100%; margin-top: 53px; }
+      .preview-toolbar { flex-wrap: wrap; align-items: center; }
+      .preview-toolbar-label { padding-top: 0; }
+      .device-switcher { max-width: 100%; }
       .device-button { padding-inline: 7px; }
       .moke-demo.app-ui { grid-template-columns: 88px minmax(0, 1fr); min-height: 330px; }
       .moke-demo .app-sidebar { display: flex; padding: 10px 6px; }
@@ -1414,8 +1415,11 @@
       .book:last-child { display: none; }
       .continue-action span { display: none; }
       .manifesto-list { flex-wrap: wrap; }
-      .preview-toolbar-label span { display: none; }
-      .device-button { gap: 4px; padding-inline: 6px; }
+      .preview-toolbar { gap: 10px; }
+      .preview-toolbar-label { justify-content: center; width: 100%; }
+      .device-switcher { width: 100%; }
+      .device-button { flex: 1; gap: 4px; padding-inline: 6px; }
+      .preview-caption { flex-direction: column; align-items: flex-start; gap: 5px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
