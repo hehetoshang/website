@@ -10,8 +10,7 @@
 
 通过以下方式赞助开发者，支持墨客继续优化和维护。
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px;">
-  <SponsorCard name="Rex" role="项目指导者" avatar="/docs/contributors/talebook/avatar.png" link="https://paypal.me/rexliao" linkText="PayPal 赞助" />
+<div style="max-width:360px;margin-top:16px;">
   <SponsorCard name="houheya" role="墨客客户端开发者" avatar="/docs/contributors/houheya/avatar.jpg" :qrcodes="{ alipay: '/docs/contributors/houheya/alipay.jpg', wechat: '/docs/contributors/houheya/weixin.jpg' }" />
 </div>
 
