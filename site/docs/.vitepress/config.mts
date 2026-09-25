@@ -70,6 +70,7 @@ export default defineConfig({
           items: [
             { text: '常见问题', link: '/guide/troubleshooting' },
             { text: '反馈问题与贡献', link: '/guide/contributing' },
+            { text: '支持我们', link: '/guide/support' },
           ],
         },
       ],
