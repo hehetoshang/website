@@ -161,6 +161,15 @@ try {
         await delay(100)
       }
       await delay(800)
+      const expanded = await evaluate(`(() => {
+        const expandButton = [...document.querySelectorAll('button')]
+          .find((button) => button.textContent?.includes('展开更多出版信息'))
+        if (!expandButton) return false
+        expandButton.click()
+        return true
+      })()`)
+      if (!expanded) throw new Error('Could not expand the book publication metadata.')
+      await delay(300)
       await capture('moke-detail.png')
     }
   }
