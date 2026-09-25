@@ -2,10 +2,6 @@
 
 完成安装、连接和第一次阅读通常只需要几分钟。
 
-![墨客连接书库界面](/screenshots/moke-welcome.png)
-
-*首次打开墨客：连接自己的 Talebook，也可以直接使用已下载内容进入离线模式。*
-
 ## 开始前检查
 
 - 已有一个可以访问的 Talebook 服务
@@ -20,6 +16,10 @@
 平台要求和安装注意事项见[安装墨客](/guide/installation)。
 
 ## 第二步：连接
+
+![墨客连接书库界面](/screenshots/moke-welcome.png)
+
+*连接自己的 Talebook，也可以直接使用已下载内容进入离线模式。*
 
 1. 打开墨客，在“连接书库”中输入 Talebook 地址。
 2. 地址未写协议时，墨客会按 HTTP 尝试；建议主动写完整的 `http://` 或 `https://`。
