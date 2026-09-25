@@ -2,6 +2,10 @@
 
 墨客（Moke）是 [Talebook](https://github.com/talebook/talebook) 的免费开源跨平台客户端。它不提供商业书城，也不会把你的藏书迁移到第三方平台。
 
+![墨客关于应用界面](/screenshots/moke-about.png)
+
+*关于应用：查看当前版本、项目定位与后续规划。*
+
 ## 三个项目如何配合
 
 ```text

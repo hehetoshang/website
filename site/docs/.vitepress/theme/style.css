@@ -45,3 +45,7 @@
   font-size: 13px;
   text-align: center;
 }
+
+.vp-doc img[src*="-mobile.png"] {
+  max-width: 390px;
+}
