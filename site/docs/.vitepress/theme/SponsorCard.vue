@@ -7,6 +7,15 @@
       <span v-if="link" class="link-text">{{ linkText }}</span>
       <span v-else class="link-text">点击查看二维码</span>
     </div>
+    <a
+      v-if="actionLink"
+      class="sponsor-action"
+      :href="actionLink"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {{ actionText }}
+    </a>
 
     <Teleport to="body">
       <div v-if="showModal" class="modal-overlay" @click.self="showModal = false">
@@ -39,6 +48,8 @@ const props = defineProps({
   link: String,
   linkText: String,
   qrcodes: Object,
+  actionLink: String,
+  actionText: String,
 })
 
 const showModal = ref(false)
@@ -76,6 +87,25 @@ function handleClick() {
 .sponsor-card h3 { font-size: 18px; font-weight: 600; margin: 0 0 4px; }
 .sponsor-card p { color: var(--vp-c-text-2); font-size: 14px; margin: 0 0 12px; }
 .link-text { color: var(--vp-c-brand); font-size: 14px; font-weight: 500; }
+.sponsor-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 12px;
+  color: var(--vp-c-brand-1);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s, background-color 0.2s;
+}
+.sponsor-action:hover {
+  color: var(--vp-c-white);
+  background: var(--vp-c-brand-1);
+}
 .modal-overlay {
   position: fixed;
   inset: 0;

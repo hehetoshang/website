@@ -8,10 +8,10 @@
 
 ## 赞助开发者
 
-通过以下方式赞助开发者，支持墨客继续优化和维护。
+点击卡片可以查看微信、支付宝二维码；也可以通过爱发电购买 Moke Preview 内测资格或进行普通赞助。
 
 <div style="max-width:360px;margin-top:16px;">
-  <SponsorCard name="houheya" role="墨客客户端开发者" avatar="/docs/contributors/houheya/avatar.jpg" :qrcodes="{ alipay: '/docs/contributors/houheya/alipay.jpg', wechat: '/docs/contributors/houheya/weixin.jpg' }" />
+  <SponsorCard name="houheya" role="墨客客户端开发者" avatar="/docs/contributors/houheya/avatar.jpg" :qrcodes="{ alipay: '/docs/contributors/houheya/alipay.jpg', wechat: '/docs/contributors/houheya/weixin.jpg' }" action-link="https://ifdian.net/a/hehetoshang" action-text="爱发电：Preview 与普通赞助" />
 </div>
 
 ## Moke Preview 赞助内测
@@ -26,8 +26,8 @@ Moke Preview 是独立于公开稳定版的桌面预览通道，面向希望提�
 
 ### 如何参加
 
-1. 通过上方赞助入口支持开发。
-2. 将赞助记录和需要使用的桌面平台发送给 Houheya，并说明希望参与 Preview 内测。
+1. 前往 [爱发电](https://ifdian.net/a/hehetoshang) 购买对应的 Moke Preview 内测方案。
+2. 将订单记录和需要使用的桌面平台发送给 Houheya。
 3. 确认后获取对应安装包和一次性 Preview 访问码。
 4. 首次启动时输入访问码，完成当前设备的激活。
 
@@ -39,7 +39,7 @@ Moke Preview 是独立于公开稳定版的桌面预览通道，面向希望提�
 - Preview 不适合作为唯一的日常阅读环境。
 
 ::: warning 说明
-赞助是对墨客持续开发的支持，不构成软件购买或稳定性承诺。公开稳定版不受 Preview 内测影响，仍会在 [talebook/moke](https://github.com/talebook/moke) 正常发布。
+爱发电同时提供普通赞助和 Moke Preview 内测方案；是否包含 Preview 资格，以爱发电页面中的具体方案说明为准。Preview 不包含稳定性承诺，公开稳定版仍会在 [talebook/moke](https://github.com/talebook/moke) 免费发布。
 :::
 
 ## 成为贡献者
