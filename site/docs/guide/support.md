@@ -16,13 +16,13 @@
 
 ## Moke Preview 赞助内测
 
-Moke Preview 用于提前验证尚未进入稳定版的新功能、交互和平台适配。赞助 Houheya 后，可以申请加入 Preview 私有仓库，提前体验开发中的版本并参与反馈。
+Moke Preview 用于提前验证尚未进入稳定版的新功能、交互和平台适配。赞助 Houheya 后，可以申请加入 Preview 内测，提前体验开发中的版本并参与反馈。
 
 1. 通过上方赞助入口支持开发。
-2. 将赞助记录与 GitHub 用户名发送给 Houheya。
-3. 确认后，由开发者邀请对应账号加入私有仓库 [hehetoshang/moke](https://github.com/hehetoshang/moke)。
+2. 将赞助记录发送给 Houheya，并说明希望参与 Preview 内测。
+3. 确认后，由开发者提供后续参与方式。
 
-私有仓库仅对已受邀的 GitHub 账号可见；未受邀时打开链接可能显示 404。Preview 版本更新更快，可能包含未完成的功能、界面调整或兼容性问题，不建议用于唯一的日常阅读环境。
+Preview 版本更新更快，可能包含未完成的功能、界面调整或兼容性问题，不建议用于唯一的日常阅读环境。
 
 ::: warning 说明
 赞助是对墨客持续开发的支持，不构成软件购买或稳定性承诺。公开稳定版仍会在 [talebook/moke](https://github.com/talebook/moke) 正常发布。
