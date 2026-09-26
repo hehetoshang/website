@@ -49,3 +49,33 @@
 .vp-doc img[src*="-mobile.png"] {
   max-width: 390px;
 }
+
+.vp-doc .preview-feedback-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  margin: 8px 0 16px;
+  padding: 0 18px;
+  border: 1px solid var(--vp-button-brand-border);
+  border-radius: 20px;
+  background-color: var(--vp-button-brand-bg);
+  color: var(--vp-button-brand-text);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.vp-doc .preview-feedback-button:hover {
+  border-color: var(--vp-button-brand-hover-border);
+  background-color: var(--vp-button-brand-hover-bg);
+  color: var(--vp-button-brand-hover-text);
+}
+
+.vp-doc .preview-feedback-button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}

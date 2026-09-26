@@ -37,6 +37,10 @@ Moke Preview 是独立于公开稳定版的桌面预览通道，面向希望提�
 - Preview 更新更快，可能包含未完成的功能、界面调整或兼容性问题，请提前备份重要数据。
 - Preview 不适合作为唯一的日常阅读环境。
 
+遇到 Preview 功能异常、安装更新问题或体验建议时，可通过专用模板快速提交。反馈内容中请勿包含访问码、订单凭证或其他敏感信息。
+
+<a class="preview-feedback-button" href="https://github.com/talebook/moke/issues/new?template=moke-preview.yml&amp;labels=moke-preview" target="_blank" rel="noopener noreferrer">一键反馈 Moke Preview 问题</a>
+
 ::: warning 说明
 爱发电同时提供普通赞助和 Moke Preview 内测方案；是否包含 Preview 资格，以爱发电页面中的具体方案说明为准。Preview 不包含稳定性承诺，公开稳定版仍会在 [talebook/moke](https://github.com/talebook/moke) 免费发布。
 :::
