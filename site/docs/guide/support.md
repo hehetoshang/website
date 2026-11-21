@@ -8,42 +8,11 @@
 
 ## 赞助开发者
 
-点击卡片可以查看微信、支付宝二维码；也可以通过爱发电购买 Moke Preview 内测资格或进行普通赞助。
+点击卡片可以查看微信、支付宝二维码，也可以通过爱发电赞助开发者。
 
 <div style="max-width:360px;margin-top:16px;">
-  <SponsorCard name="houheya" role="墨客客户端开发者" avatar="/docs/contributors/houheya/avatar.jpg" :qrcodes="{ alipay: '/docs/contributors/houheya/alipay.jpg', wechat: '/docs/contributors/houheya/weixin.jpg' }" action-link="https://ifdian.net/a/hehetoshang" action-text="爱发电：Preview 与普通赞助" />
+  <SponsorCard name="houheya" role="墨客客户端开发者" avatar="/docs/contributors/houheya/avatar.jpg" :qrcodes="{ alipay: '/docs/contributors/houheya/alipay.jpg', wechat: '/docs/contributors/houheya/weixin.jpg' }" action-link="https://ifdian.net/a/hehetoshang" action-text="通过爱发电赞助" />
 </div>
-
-## Moke Preview 赞助内测
-
-Moke Preview 是独立于公开稳定版的桌面预览通道，面向希望提前体验新功能并参与反馈的赞助者。目前提供 Windows、macOS 和 Linux 构建。
-
-### 可以体验什么
-
-- 尚未进入稳定版的新功能、交互调整与兼容性改进
-- 与稳定版分开的 Preview 构建和发布节奏
-- 在功能正式发布前向开发者反馈问题与使用感受
-
-### 如何参加
-
-1. 前往 [爱发电](https://ifdian.net/a/hehetoshang) 购买对应的 Moke Preview 内测方案。
-2. 从私信获取对应安装包和一次性 Preview 访问码。
-3. 首次启动时输入访问码，完成当前设备的激活。
-
-### 使用须知
-
-- Preview 资格与当前设备绑定，启动时需要联网检查授权。
-- 更换或重装设备时，需按应用提示迁移资格；无法迁移时请联系开发者处理。
-- Preview 更新更快，可能包含未完成的功能、界面调整或兼容性问题，请提前备份重要数据。
-- Preview 不适合作为唯一的日常阅读环境。
-
-遇到 Preview 功能异常、安装更新问题或体验建议时，可通过专用模板快速提交。反馈内容中请勿包含访问码、订单凭证或其他敏感信息。
-
-<a class="preview-feedback-button" href="https://github.com/talebook/moke/issues/new?template=moke-preview.yml&amp;labels=moke-preview" target="_blank" rel="noopener noreferrer">一键反馈 Moke Preview 问题</a>
-
-::: warning 说明
-爱发电同时提供普通赞助和 Moke Preview 内测方案；是否包含 Preview 资格，以爱发电页面中的具体方案说明为准。Preview 不包含稳定性承诺，公开稳定版仍会在 [talebook/moke](https://github.com/talebook/moke) 免费发布。
-:::
 
 ## 成为贡献者
 
